@@ -21,8 +21,25 @@ public class Zookeper
 	public void feedAnimals(List<Animal> zoo) {
 		System.out.println("Feeding the animals...");
 		for (Animal animal : zoo) {
-			//TODO: add foods/probs for the eat behavior
-			animal.eat();
+			double r = Math.random();
+			String food = "";
+			if(r < 0.3)
+				food = "grub";
+			else if(r < 0.5)
+				food = "kibble";
+			else if(r < 0.7)
+				food = "consumables";
+			else if(r < 0.9)
+				food = "relevant food";
+			else if(r < 0.99)
+				food = "dubious food";
+			else
+				food = ".\n" +
+						".\n" +
+						"s̵͖̖̭̠̺͂͒̓̏͢͞ȏ̠̘̞͓̼̮͍͌̀̔̅̌̃̄͟͢͡ư̸̳͓̖̙̫̞͒̽̑͛̕͟͟͜͝l̸̨͇̫̜͈̃͐̇̏̑̐̏̑̚s̵̲̮̤͈͖̟̰̾̂̈́͌̕͝\n" +
+						".\n" +
+						".";
+			animal.eat(food);
 		}
 		System.out.println("The food is all gone!");
 	}
