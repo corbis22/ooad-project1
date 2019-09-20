@@ -6,7 +6,7 @@ public class main
 	public static void main(String[] args)
 	{
         // Create the zoo with all the animals
-	    List<Animal> zoo = new ArrayList();
+	    List<Animal> zoo = new ArrayList<>();
 	    zoo.add(new Dog("Doug"));
 	    zoo.add(new Dog("Diane"));
 		zoo.add(new Elephant("Earl"));
