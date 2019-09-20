@@ -5,9 +5,13 @@ public class Zookeeper
 	private List<Animal> zoo;
 
 	public Zookeeper(List<Animal> _zoo) {
+        // Zookeeper owns the zoo
 	    zoo = _zoo;
 	}
 
+    /*
+       Wake up all the animals - they will no longer be asleep
+    */
 	public void wakeAnimals() {
 		System.out.println("Waking up the animals...");
 		for (Animal animal : zoo) {
@@ -16,6 +20,9 @@ public class Zookeeper
 		System.out.println("All the animals are awake!");
 	}
 
+    /*
+       Roll call the animals - they will make sounds
+    */
 	public void rollCallAnimals() {
 		System.out.println("Taking roll call...");
 		for (Animal animal : zoo) {
@@ -24,9 +31,13 @@ public class Zookeeper
 		System.out.println("That's everybody!");
 	}
 
+    /*
+       Feed the animals - they may or may not eat
+    */
 	public void feedAnimals() {
 		System.out.println("Feeding the animals...");
 		for (Animal animal : zoo) {
+            // Animals get a randomized meal
 			double r = Math.random();
 			String food = "";
 			if(r < 0.3)
@@ -50,6 +61,9 @@ public class Zookeeper
 		System.out.println("The food is all gone!");
 	}
 
+    /*
+       Exercise the animals - they will roam
+    */
 	public void exerciseAnimals() {
 		System.out.println("Time for a workout...");
 		for (Animal animal : zoo) {
@@ -58,6 +72,9 @@ public class Zookeeper
 		System.out.println("All in a day's work!");
 	}
 
+    /*
+       Put all the animals back to sleep
+    */
 	public void shutDownZoo() {
 		System.out.println("Lights out...");
 		for (Animal animal : zoo) {

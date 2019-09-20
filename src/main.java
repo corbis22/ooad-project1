@@ -5,6 +5,7 @@ public class main
 {
 	public static void main(String[] args)
 	{
+        // Create the zoo with all the animals
 	    List<Animal> zoo = new ArrayList();
 	    zoo.add(new Dog("Doug"));
 	    zoo.add(new Dog("Diane"));
@@ -23,7 +24,9 @@ public class main
 		zoo.add(new Wolf("Warren"));
 		zoo.add(new Wolf("Wendy"));
 
+        // Create the zookeeper
 		Zookeeper keeper = new Zookeeper(zoo);
+        // Have him perform his duties
 		keeper.wakeAnimals();
 		keeper.rollCallAnimals();
 		keeper.feedAnimals();
