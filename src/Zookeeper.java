@@ -1,8 +1,14 @@
 import java.util.List;
 
-public class Zookeper
+public class Zookeeper
 {
-	public void wakeAnimals(List<Animal> zoo) {
+	private List<Animal> zoo;
+
+	public Zookeeper(List<Animal> _zoo) {
+	    zoo = _zoo;
+	}
+
+	public void wakeAnimals() {
 		System.out.println("Waking up the animals...");
 		for (Animal animal : zoo) {
 			animal.wakeUp();
@@ -10,7 +16,7 @@ public class Zookeper
 		System.out.println("All the animals are awake!");
 	}
 
-	public void rollCallAnimals(List<Animal> zoo) {
+	public void rollCallAnimals() {
 		System.out.println("Taking roll call...");
 		for (Animal animal : zoo) {
 			animal.makeNoise();
@@ -18,7 +24,7 @@ public class Zookeper
 		System.out.println("That's everybody!");
 	}
 
-	public void feedAnimals(List<Animal> zoo) {
+	public void feedAnimals() {
 		System.out.println("Feeding the animals...");
 		for (Animal animal : zoo) {
 			double r = Math.random();
@@ -44,7 +50,7 @@ public class Zookeper
 		System.out.println("The food is all gone!");
 	}
 
-	public void exerciseAnimals(List<Animal> zoo) {
+	public void exerciseAnimals() {
 		System.out.println("Time for a workout...");
 		for (Animal animal : zoo) {
 			animal.roam();
@@ -52,10 +58,11 @@ public class Zookeper
 		System.out.println("All in a day's work!");
 	}
 
-	public void shutDownZoo(List<Animal> zoo) {
+	public void shutDownZoo() {
 		System.out.println("Lights out...");
 		for (Animal animal : zoo) {
 			animal.goToSleep();
 		}
+		System.out.println("Good night!");
 	}
 }

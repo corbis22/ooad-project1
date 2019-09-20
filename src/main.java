@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.ArrayList;
 
 public class main
 {
@@ -22,11 +23,11 @@ public class main
 		zoo.add(new Wolf("Warren"));
 		zoo.add(new Wolf("Wendy"));
 
-		Zookeeper keeper = new Zookeeper();
-		keeper.wakeAnimals(zoo);
-		keeper.rollCallAnimals(zoo);
-		keeper.feedAnimals(zoo);
-		keeper.exerciseAnimals(zoo);
-		keeper.shutDownZoo(zoo);
+		Zookeeper keeper = new Zookeeper(zoo);
+		keeper.wakeAnimals();
+		keeper.rollCallAnimals();
+		keeper.feedAnimals();
+		keeper.exerciseAnimals();
+		keeper.shutDownZoo();
 	}
 }
